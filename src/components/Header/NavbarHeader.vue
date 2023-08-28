@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <div class="navbar-brand ms_img"><router-link to="/" @click="isFalse()"><img src="../../assets/logo_europerforazioni.jpeg" alt=""></router-link></div>
+        <div class="navbar-brand ms_img"><router-link to="/" @click="isFalse()"><img src="../../assets/img/logo_europerforazioni.jpeg" alt=""></router-link></div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -52,6 +52,10 @@ export default {
 
 <style scoped lang="scss">
 nav{
+position: fixed;
+right: 0;
+top: 0;
+left: 0;
 background-color: white !important;
 z-index: 1;
 

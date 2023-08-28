@@ -1,8 +1,8 @@
 <template>
-  <section class="mt-5 mb-5">
+  <section>
     <div class="ms_box pt-5 pb-5">
       <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-between ms_center">
           <div class="ms_box_img d-inline-block ms_relative_right col-8 col-sm-5 col-md-5 col-lg-3"><img :src="imgs[activIndex].img" alt="" /></div>
           <div class="ms_box_img d-inline-block ms_relative_left col-sm-5 col-md-5 col-lg-3 ms-5 ms_none"><img :src="imgs[imgIndex].img" alt="" /></div>
           <div class="ms_box_img d-inline-block ms_relative_right col-lg-3 mx-5 ms_none_md"><img :src="imgs[imgI].img" alt="" /></div>
@@ -21,19 +21,19 @@ export default {
       imgI: 2,
       imgs:[
         {
-          img: require("../../assets/trivella-1.jpeg")
+          img: require("../../assets/img/trivella-1.jpeg")
         },
         {
-          img: require("../../assets/trivella-2.jpeg")
+          img: require("../../assets/img/trivella-2.jpeg")
         },
         {
-          img: require("../../assets/trivella-3.jpeg")
+          img: require("../../assets/img/trivella-3.jpeg")
         },
         {
-          img: require("../../assets/trivella-4.jpeg")
+          img: require("../../assets/img/trivella-4.jpeg")
         },
         {
-          img: require("../../assets/trivella-5.jpeg")
+          img: require("../../assets/img/trivella-5.jpeg")
         },
       ]
     }
@@ -74,8 +74,8 @@ export default {
 
 <style scoped lang="scss">
 @import "../../css/variables.scss";
+
 .ms_box {
-  background-color: $Back_color;
   height: 630px;
 }
 
@@ -90,10 +90,10 @@ export default {
 .ms_box_img {
   padding: 0 !important;
   border-radius: 20px;
-  box-shadow:  10px  10px 5px rgba(128, 92, 0, 0.461),
-              -10px -10px 5px rgba(255, 208, 0, 0.707),
-               10px -10px 5px rgba(255, 208, 0, 0.368),
-              -10px  10px 5px rgba(255, 208, 0, 0.368);
+  box-shadow:  5px  5px 5px rgba(165, 165, 165, 0.461),
+              -5px -5px 5px rgba(165, 165, 165, 0.461),
+               5px -5px 5px rgba(165, 165, 165, 0.461),
+              -5px  5px 5px rgba(165, 165, 165, 0.461);
 
 }
 img{
@@ -116,6 +116,9 @@ img{
 
 
 @media screen and (max-width: 575px) {
+  .ms_center{
+    justify-content: center !important;
+  }
   .ms_none{
     display: none !important;
   }

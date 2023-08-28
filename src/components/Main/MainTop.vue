@@ -1,17 +1,21 @@
 <template>
-  <section class="mt-5 ms_back pt-5 pb-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-6 col-lg-5 ms_box_img text-center"><img src="../../assets/trivella-4.jpeg" alt=""></div>
-            <div class="col-12 col-md-6 col-lg-5 ms_box_img fs-5">
-                <h2>Europerforazioni</h2>
-                <p>Siamo <strong>specialisti</strong> di riferimento nell'ambito delle <strong>perforazioni e palificazioni</strong> con una lunga tradizione di dedizione.</p> 
-                <p>La nostra passione ci guida nell'offrire soluzioni <strong>affidabili</strong> frutto di un'<strong>esperienza</strong> consolidata nel tempo.</p>
-                <p>La nostra <strong>competenza</strong> ci permette di <strong>soddisfare</strong> ogni requisito, assicurando <strong>risultati di eccellenza</strong> e costruendo rapporti duraturi con la nostra preziosa clientela.</p>
-                <h4>Cell: +39 347 629 1538</h4>
-                <h4>Email: dittalettieri@libero.it</h4>
+  <section class="ms_back">
+    <div class="ms_back_img">
+        <div class="ms_color pt-5 pb-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6 col-lg-5 ms_box_img text-center mb-5"><img src="../../assets/img/trivella-4.jpeg" alt=""></div>
+                    <div class="col-12 col-md-6 col-lg-5 ms_box_img fs-5">
+                        <h2>Europerforazioni</h2>
+                        <p>Siamo <strong>specialisti</strong> di riferimento nell'ambito delle <strong>perforazioni e palificazioni</strong> con una lunga tradizione di dedizione.</p> 
+                        <p>La nostra passione ci guida nell'offrire soluzioni <strong>affidabili</strong> frutto di un'<strong>esperienza</strong> consolidata nel tempo.</p>
+                        <p>La nostra <strong>competenza</strong> ci permette di <strong>soddisfare</strong> ogni requisito, assicurando <strong>risultati di eccellenza</strong> e costruendo rapporti duraturi con la nostra preziosa clientela.</p>
+                        <h4>Cell: +39 347 629 1538</h4>
+                        <h4>Email: dittalettieri@libero.it</h4>
+                    </div>
+                </div>
             </div>
-        </div>
+        </div>    
     </div>
   </section>
 </template>
@@ -24,11 +28,20 @@ export default {
 
 <style scoped lang="scss">
 @import "../../css/variables.scss";
-.ms_back{
-    background-color: $Back_color;
+.ms_back{ 
+    margin-top: 101px;
 
     p{
         margin-bottom: 3px;
+    }
+    .ms_color{
+        background-color: rgba(183, 206, 221, 0.79);
+    }
+    .ms_back_img{
+        background-image: url(https://scontent.fbri2-1.fna.fbcdn.net/v/t31.18172-8/1622481_1459981787558848_1882077146_o.jpg?_nc_cat=101&ccb=1-7&_nc_sid=e3f864&_nc_ohc=SQu5DWczTtUAX86wWPJ&_nc_ht=scontent.fbri2-1.fna&oh=00_AfCvJGXoSjQVPMVAtXu87PfNkOwDDPu-SyCRxq1ByzHp4w&oe=6513BE51);
+        background-size: 90%;
+        background-repeat: no-repeat;
+        background-position: top;
     }
 
     .ms_box_img{
