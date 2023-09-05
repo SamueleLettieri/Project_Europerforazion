@@ -1,5 +1,5 @@
 <template>
-  <section id="Chi_Siamo">
+  <section id="Chi_Siamo" class="ms_margin_top">  
     Chi Siamo
   </section>
 </template>
@@ -10,6 +10,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "../css/variables.scss";
 
+.ms_margin_top{
+  margin-top: $Margin_Top;
+}
 </style>

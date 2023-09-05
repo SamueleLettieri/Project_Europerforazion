@@ -7,8 +7,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item" v-for="(link, index) in links" :key="index">
-              <router-link class="nav-link active" :class="{'ms_active': activeIndex === index}" @click="nextIndex(index)" aria-current="page" :to="link.href"><h6>{{link.text}}</h6></router-link>
+            <li class="nav-item" v-for="(link, index) in dati.links" :key="index">
+              <router-link class="nav-link active ms_hovere" :class="{'ms_active': activeIndex === index}" @click="nextIndex(index)" aria-current="page" :to="link.href"><h6>{{link.text}}</h6></router-link>
             </li>
           </ul>
         </div>
@@ -17,36 +17,16 @@
 </template>
 
 <script>
+import { dati } from "../../js/LinkRouter"
 export default { 
     data: function(){
         return{
-            activeIndex: -1,
-            links:[
-                {
-                    href: '/Chi_Siamo',
-                    text: 'Chi Siamo'
-                },
-                {
-                    href: '/Servizi',
-                    text: 'Servizi'
-                },
-                {
-                    href: '/Contatti',
-                    text: 'Contatti'
-                },
-            ]
+            dati: dati,
+            activeIndex: dati.variables.activeIndex,
+            nextIndex: dati.methods.nextIndex,
+            isFalse: dati.methods.isFalse,
         }
     },
-    methods: {
-        nextIndex(index){
-            this.activeIndex = index;
-            console.log(index);
-        },
-
-        isFalse(){
-            this.activeIndex= -1;
-        }
-    }
 }
 </script>
 
@@ -67,5 +47,10 @@ z-index: 1;
     .ms_active{
         color: rgb(0, 47, 255) !important;
     }
+
+    .ms_hovere:hover{
+        color: rgb(0, 47, 255) !important;
+    }
+
 }
 </style>
