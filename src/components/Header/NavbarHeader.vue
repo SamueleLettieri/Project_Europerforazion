@@ -38,6 +38,7 @@ top: 0;
 left: 0;
 background-color: white !important;
 z-index: 1;
+border-bottom: 1px solid lightgray;
 
     img{
         width: 100px;

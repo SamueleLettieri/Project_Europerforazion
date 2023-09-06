@@ -3,9 +3,9 @@
     <div class="ms_box pt-5 pb-5">
       <div class="container">
         <div class="row justify-content-between ms_center">
-          <div class="ms_box_img d-inline-block ms_relative_right col-8 col-sm-4 mb-5"><video src="../../assets/video/video1.mp4" controls></video></div>
-          <div class="ms_box_img d-inline-block ms_relative_left col-8 col-sm-4 mb-5"><video src="../../assets/video/video2.mp4" controls></video></div>
-          <div class="ms_box_img d-inline-block ms_relative_right col-8 col-sm-4 "><video src="../../assets/video/video3.mp4" controls></video></div>
+          <div class="ms_box_img d-inline-block ms_relative_right col-8 col-sm-4 mb-5"><div class="ms_box_cuadrato"></div><video src="../../assets/video/video1.mp4" controls></video></div>
+          <div class="ms_box_img d-inline-block ms_relative_left col-8 col-sm-4 mb-5"><video src="../../assets/video/video2.mp4" controls></video><div class="ms_box_cuadrato"></div></div>
+          <div class="ms_box_img d-inline-block ms_relative_right col-8 col-sm-4 "><div class="ms_box_cuadrato"></div><video src="../../assets/video/video3.mp4" controls></video></div>
         </div>
       </div>
     </div>
@@ -24,7 +24,13 @@ export default {
 
 <style scoped lang="scss">
 @import "../../css/variables.scss";
-  
+
+.ms_box_cuadrato{
+  height: 250px;
+  background-color: blue; 
+
+}
+
 video{
   right: 0px;
   width: 100%;

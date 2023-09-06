@@ -2,36 +2,18 @@
     <section class="ms_slider-container" >
       <div>
           <div class="ms_slider">
-            <div class="ms_box_img d-inline-block ms_slide" v-for="(img, index) in imgs" :key="index"><img :src="img.img" alt="" /></div>
-            <div class="ms_box_img d-inline-block ms_slide" v-for="(img, index) in imgs" :key="index"><img :src="img.img" alt="" /></div>
-            <div class="ms_box_img d-inline-block ms_slide" v-for="(img, index) in imgs" :key="index"><img :src="img.img" alt="" /></div>
-            <div class="ms_box_img d-inline-block ms_slide" v-for="(img, index) in imgs" :key="index"><img :src="img.img" alt="" /></div>
+            <div class="ms_box_img d-inline-block ms_slide" v-for="(img, index) in Images" :key="index"><img :src="img.img" alt="" /></div>
           </div>
         </div>
     </section>
   </template>
   
   <script>
+  import { Images } from '../../js/DatiAlbum'
   export default {
     data: function(){
       return{
-        imgs:[
-          {
-            img: require("../../assets/img/trivella-1.jpeg")
-          },
-          {
-            img: require("../../assets/img/trivella-2.jpeg")
-          },
-          {
-            img: require("../../assets/img/trivella-3.jpeg")
-          },
-          {
-            img: require("../../assets/img/trivella-4.jpeg")
-          },
-          {
-            img: require("../../assets/img/trivella-5.jpeg")
-          },
-        ]
+        Images: Images,
       }
     },
   }
