@@ -21,7 +21,7 @@
                     <h6>Email: dittalettieri@libero.it</h6>       
                 </div>
                 <div class="col-12 col-md-12 mt-3">
-                    <i class="fa-brands fa-facebook mx-4 fs-4"></i> <i class="fa-brands fa-instagram fs-4"></i>
+                   <a href="https://www.facebook.com/giuseppe.lettieri.374" target="_blank"><i class="fa-brands fa-facebook mx-4 fs-4"></i></a> <i class="fa-brands fa-instagram fs-4"></i>
                 </div> 
             </div>
         </div>

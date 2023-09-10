@@ -13,7 +13,7 @@
   export default {
     data: function(){
       return{
-        Images: Images,
+        Images: Images.ImagesHome,
       }
     },
   }
