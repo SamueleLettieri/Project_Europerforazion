@@ -1,11 +1,9 @@
 <template>
   <section>
     <div class="container ms_color">
-        <div class="row">
+        <div class="row ms_b_b">
             <div class="col-12 col-md-6 p-5 ms_f_s" :class="{'ms_box': isTrue === true}"><h1>{{ title }}</h1><h2>{{ minititle }}</h2></div>
-            <div class="col-12 col-md-6 p-5 ms_f_s_20" :class="{'ms_box': isTrue === false}">
-                {{ presentazione }}
-            </div>
+            <div class="col-12 col-md-6 p-5 ms_f_s_20" :class="{'ms_box': isTrue === false}">{{ presentazione }}</div>
         </div>
     </div>
   </section>
@@ -31,4 +29,15 @@ props: ["title", "minititle", "presentazione", "isTrue"]
     font-size: 20px;
 }
 
+.ms_b_b{
+  border-bottom: 1px solid rgba(176, 196, 222, 0.1);
+}
+
+
+@media screen and (max-width:  767px) {
+    .ms_b_b{
+        border: 3px solid rgba(176, 196, 222, 0.1);
+    }
+
+}
 </style>

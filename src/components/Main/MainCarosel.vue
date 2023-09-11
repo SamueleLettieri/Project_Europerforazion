@@ -9,7 +9,7 @@
   </template>
   
   <script>
-  import { Images } from '../../js/DatiAlbum'
+  import { Images } from '../../js/DatiFoto'
   export default {
     data: function(){
       return{
@@ -31,7 +31,7 @@
 
   .ms_slider {
     display: flex;
-    animation: slide 15s linear infinite;
+    animation: slide 23s linear infinite;
   }
 
   .ms_slide {
@@ -47,7 +47,7 @@
       transform: translateX(-40px);
     }
     100% {
-      transform: translateX(-115%);
+      transform: translateX(-153%);
     }
   }
 
@@ -58,4 +58,9 @@
     animation: changeImage 4s infinite;
   }
   
+  @media screen and (max-width: 575px) {
+    .ms_slider {
+    animation: slide 10s linear infinite;
+  }
+}
   </style>

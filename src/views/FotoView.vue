@@ -1,12 +1,18 @@
 <template>
   <section id="Foto" class="ms_margin_top">
-    Foto
+    <div class="container">
+      <div class="row">
+        <card-foto />
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
+import CardFoto from '@/components/MainAlbum/CardFoto.vue'
 export default {
-
+  components: { CardFoto },
+  
 }
 </script>
 
