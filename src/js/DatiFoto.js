@@ -41,12 +41,24 @@ export const Images = {
             img: require("../assets/img/trivella-10.jpg"),
         },
         {
+            id: 11,
+            img: require("../assets/img/trivella-11.jpg"),
+        },
+        {
+            id: 12,
+            img: require("../assets/img/trivella-12.jpg"),
+        },
+        {
             id: 13,
             img: require("../assets/img/trivella-13.jpg"),
         },
         {
             id: 14,
             img: require("../assets/img/trivella-14.jpg"),
+        },
+        {
+            id: 15,
+            img: require("../assets/img/trivella-15.jpg"),
         },
         {
             id: 16,

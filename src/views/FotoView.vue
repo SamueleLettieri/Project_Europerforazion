@@ -1,10 +1,6 @@
 <template>
   <section id="Foto" class="ms_margin_top">
-    <div class="container">
-      <div class="row">
-        <card-foto />
-      </div>
-    </div>
+      <card-foto />
   </section>
 </template>
 
