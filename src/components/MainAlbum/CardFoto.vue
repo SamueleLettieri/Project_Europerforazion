@@ -2,16 +2,16 @@
   <div>
     <div class="mx-5 p-4 ms_m0" v-if="isTrue == false">
       <div class="row" > <!-- v-if="isTrue == false" -->
-        <div class="col-3 col-md-3 col-lg-2 p-2" v-for="(img, index) in newArrayImg" :key="index" @click="imgDetail(index)"><img class="ms_img" :src="img.img" alt=""></div>
+        <div class="col-3 col-md-3 col-lg-2 p-2" v-for="(img, index) in newArrayImg" :key="index" @click="imgDetail(index)"><img class="ms_img ms_cursor" :src="img.img" alt=""></div>
       </div>
     </div>
     <div class="ms_fixed" v-else>
-      <div class="position-fixed p-4 ms_right"><i class="fa-solid fa-x fs-5" style="color: #ffffff;" @click="isTrue = false"></i></div>
-      <div class="position-fixed p-4 ms_top"><i class="fa-solid fa-arrow-left fs-4" style="color: #ffffff;" @click="arrowLeft()"></i></div>
-      <div class="position-fixed p-4 ms_right ms_top"><i class="fa-solid fa-arrow-right fs-4" style="color: #ffffff;"></i></div>
+      <div class="position-fixed p-4 ms_right ms_cursor"  @click="isTrue = false"><i class="fa-solid fa-x fs-5" style="color: #ffffff;"></i></div>
+      <div class="position-fixed p-4 ms_top ms_cursor" @click="arrowLeft()"><i class="fa-solid fa-arrow-left fs-4" style="color: #ffffff;"></i></div>
+      <div class="position-fixed p-4 ms_right ms_top ms_cursor" @click="arrowRight()"><i class="fa-solid fa-arrow-right fs-4" style="color: #ffffff;"></i></div>
       <div class="container h-100">
         <div class="row align-items-center h-100">
-          <div class="col-12"><img class="ms_imgdetail" :src="newImg" alt=""></div>
+          <div class="col-12"><img class="ms_imgdetail" :src="this.newArrayImg[this.nextIndex].img" alt=""></div>
         </div>
       </div>
     </div>
@@ -24,7 +24,6 @@ import { Images } from '../../js/DatiFoto'
 export default {
   data: function(){
     return{
-      newImg: null,
       isTrue: false,
       nextIndex: null,
       newArrayImg: [],
@@ -47,15 +46,22 @@ export default {
     imgDetail(index){
       this.nextIndex = index;
       this.isTrue = true;
-      /* console.log(this.newArrayImg[this.nextIndex].img); */
-      this.newImg = this.newArrayImg[this.nextIndex].img;
-      /* console.log(this.newImg); */
+
     },
 
     arrowLeft(){
-      this.nextIndex--
-      console.log(this.nextIndex)
-    }
+      this.nextIndex--;
+      if(this.nextIndex < 0){
+        this.nextIndex = this.newArrayImg.length-1;
+      }
+    },
+
+    arrowRight(){
+      this.nextIndex++;
+      if(this.nextIndex == this.newArrayImg.length){
+        this.nextIndex = 0;
+      }
+    },
 
   },
 
@@ -66,6 +72,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.ms_cursor{
+  cursor: pointer;
+}
 .ms_img{ 
   object-fit: cover;
   width: 100%;
