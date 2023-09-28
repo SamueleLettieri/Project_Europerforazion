@@ -38,7 +38,7 @@ export default {
         background-color: rgba(183, 206, 221, 0.79);
     }
     .ms_back_img{
-        background-image: url(https://scontent.fbri2-1.fna.fbcdn.net/v/t31.18172-8/1622481_1459981787558848_1882077146_o.jpg?_nc_cat=101&ccb=1-7&_nc_sid=e3f864&_nc_ohc=SQu5DWczTtUAX86wWPJ&_nc_ht=scontent.fbri2-1.fna&oh=00_AfCvJGXoSjQVPMVAtXu87PfNkOwDDPu-SyCRxq1ByzHp4w&oe=6513BE51);
+        background-image: url(../../assets/img/Biglietto_da_visita.jpg);
         background-size: 90%;
         background-repeat: no-repeat;
         background-size: cover;
