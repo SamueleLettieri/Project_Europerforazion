@@ -8,7 +8,7 @@
                 <div class="">
                     <ul class="p-2 text-start">
                         <li class="nav-item p-0" v-for="(link, index) in dati.links" :key="index">
-                            <router-link class="nav-link active ms_hovere p-0 mb-2 ms_center" @click="nextIndex(index)" aria-current="page" :to="link.href">{{link.text}}</router-link>
+                            <router-link class="nav-link active ms_hovere p-0 mb-2 ms_center" @click="nextIndex(index),  setId()" aria-current="page" :to="link.href">{{link.text}}</router-link>
                         </li>
                     </ul>
                 </div>
@@ -32,6 +32,7 @@
 <script>
 import MainMamps from '../Generals/MainMamps.vue'
 import { dati } from "../../js/LinkRouter"
+import { mapMutations } from 'vuex'
 export default {
     components:{
         MainMamps,
@@ -42,8 +43,23 @@ export default {
             activeIndex: dati.variables.activeIndex,
             nextIndex: dati.methods.nextIndex,
             isFalse: dati.methods.isFalse,
+            id: null,
+            boolean: false,
         }
     },
+     methods:{
+     ...mapMutations(['impostaid']), // Mappa la mutazione da Vuex
+     ...mapMutations(['impostaBoolean']), // Mappa la mutazione da Vuex
+
+        setId(){
+            this.id = this.activeIndex;
+            this.boolean = true
+
+            this.impostaid(this.id); // Chiama la mutazione per cambiare il valore
+            this.impostaBoolean(this.boolean);
+        },
+    } 
+
 }
 </script>
 

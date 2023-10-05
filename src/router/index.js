@@ -13,17 +13,17 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/Chi_Siamo',
+    path: '/Chi_Siamo/:id',
     name: 'Chi_Siamo',
     component: ChiSiamo
   },
   {
-    path: '/Servizi',
+    path: '/Servizi/:id',
     name: 'Servizi',
     component: Servizi
   },
   {
-    path: '/Foto',
+    path: '/Foto/:id',
     name: 'Foto',
     component: Foto
   },

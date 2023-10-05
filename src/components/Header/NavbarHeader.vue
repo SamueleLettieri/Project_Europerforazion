@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item" v-for="(link, index) in dati.links" :key="index">
-              <router-link class="nav-link active ms_hovere" :class="{'ms_active': activeIndex === index}" @click="nextIndex(index)" aria-current="page" :to="link.href"><h6>{{link.text}}</h6></router-link>
+              <router-link class="nav-link active ms_hovere" :class="{'ms_active': activeIndex === index || id === index}" @click="nextIndex(index), nextValue()" aria-current="page" :to="link.href"><h6>{{link.text}}</h6></router-link>
             </li>
           </ul>
         </div>
@@ -18,15 +18,46 @@
 
 <script>
 import { dati } from "../../js/LinkRouter"
+import { mapState } from 'vuex'
 export default { 
-    data: function(){
-        return{
-            dati: dati,
-            activeIndex: dati.variables.activeIndex,
-            nextIndex: dati.methods.nextIndex,
-            isFalse: dati.methods.isFalse,
-        }
+  data: function(){
+      return{
+        dati: dati,
+        activeIndex: dati.variables.activeIndex,
+        nextIndex: dati.methods.nextIndex,
+        isFalse: dati.methods.isFalse,
+      }
+  },
+
+  methods: {
+    nextValue(){
+
+      if(this.id !== null){
+        this.$store.commit('impostaid', null);
+        this.$store.commit('impostaBoolean', null);
+      }
     },
+
+    test(){
+      if(this.boolean === true){
+        this.activeIndex = null;
+      }
+      this.activeIndex
+    },
+  },
+
+  watch: {
+    boolean(newVal) {
+      if (newVal === true) {
+        this.test();
+      }
+    }
+  },
+
+  computed: {
+    ...mapState(['id']), // Mappa lo stato da Vuex
+    ...mapState(['boolean']), // Mappa lo stato da Vuex
+  },
 }
 </script>
 

@@ -1,15 +1,15 @@
 export const dati = {
     links: [
         {
-        href: '/Chi_Siamo',
+        href: '/Chi_Siamo/:id',
         text: 'Chi Siamo'
         },
         {
-        href: '/Servizi',
+        href: '/Servizi/:id',
         text: 'Servizi'
         },
         {
-        href: '/Foto',
+        href: '/Foto/:id',
         text: 'Foto'
         },
     ],
@@ -21,11 +21,14 @@ export const dati = {
     methods: {
         nextIndex(index){
             this.activeIndex = index;
-            console.log(index);
         },
 
         isFalse(){
             this.activeIndex = null;
-        }
-    }
+        },
+
+    },
+
+
+    
 }
