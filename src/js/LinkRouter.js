@@ -1,15 +1,15 @@
 export const dati = {
     links: [
         {
-        href: '/Chi_Siamo/:id',
+        href: '/Chi_Siamo',
         text: 'Chi Siamo'
         },
         {
-        href: '/Servizi/:id',
+        href: '/Servizi',
         text: 'Servizi'
         },
         {
-        href: '/Foto/:id',
+        href: '/Foto',
         text: 'Foto'
         },
     ],

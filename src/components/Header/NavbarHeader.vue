@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <div class="navbar-brand ms_img"><router-link to="/" @click="isFalse()"><img src="../../assets/img/logo_europerforazioni.jpeg" alt=""></router-link></div>
+        <div class="navbar-brand ms_img"><router-link to="/" @click="isFalse(), nextValue()"><img src="../../assets/img/logo_europerforazioni.jpeg" alt=""></router-link></div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -31,14 +31,13 @@ export default {
 
   methods: {
     nextValue(){
-
       if(this.id !== null){
         this.$store.commit('impostaid', null);
         this.$store.commit('impostaBoolean', null);
       }
     },
 
-    test(){
+    newBoolean(){
       if(this.boolean === true){
         this.activeIndex = null;
       }
@@ -49,7 +48,7 @@ export default {
   watch: {
     boolean(newVal) {
       if (newVal === true) {
-        this.test();
+        this.newBoolean();
       }
     }
   },
