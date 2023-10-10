@@ -21,7 +21,7 @@
                     <h6>Email: dittalettieri@libero.it</h6>       
                 </div>
                 <div class="col-12 col-md-12 mt-3">
-                   <a href="https://www.facebook.com/giuseppe.lettieri.374" target="_blank"><i class="fa-brands fa-facebook mx-4 fs-4"></i></a> <i class="fa-brands fa-instagram fs-4"></i>
+                   <a class="ms_c_w" href="https://www.facebook.com/giuseppe.lettieri.374" target="_blank"><i class="fa-brands fa-facebook mx-4 fs-4"></i></a> <a class="ms_c_w" href="https://www.instagram.com/europerforazioni_lettieri/" target="_blank"><i class="fa-brands fa-instagram fs-4"></i></a>
                 </div> 
             </div>
         </div>

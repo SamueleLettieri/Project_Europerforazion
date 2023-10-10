@@ -17,5 +17,13 @@ export const DatiAlbum = {
             id: 26,
             img: require("../assets/img/trivella-26.jpg"),
         }, 
+        {
+            id: 30,
+            img: require("../assets/img/trivella-30.jpg"),
+        }, 
+        {
+            id: 31,
+            img: require("../assets/img/trivella-31.jpg"),
+        }, 
     ]
 }

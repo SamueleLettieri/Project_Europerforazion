@@ -53,12 +53,14 @@ export default {
 .ms_margin_top{
   margin-top: $Margin_Top;
 }
+.ms_box_img{
+  padding: 0px;
+}
 img{
   width: 100%;
   height: 500px;
   object-position: center;
   object-fit: cover;
 }
-
 
 </style>

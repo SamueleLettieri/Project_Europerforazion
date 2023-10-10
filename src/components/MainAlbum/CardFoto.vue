@@ -8,7 +8,7 @@
     <div class="ms_fixed" v-else>
       <div class="position-fixed p-4 ms_right ms_cursor"  @click="isTrue = false"><i class="fa-solid fa-x fs-5" style="color: #ffffff;"></i></div>
       <div class="position-fixed p-4 ms_top ms_cursor" @click="arrowLeft()"><i class="fa-solid fa-arrow-left fs-4" style="color: #ffffff;"></i></div>
-      <div class="position-fixed p-4 ms_right ms_top" @click="arrowRight()"><i class="fa-solid fa-arrow-right fs-4" style="color: #ffffff;"></i></div>
+      <div class="position-fixed p-4 ms_right ms_top ms_cursor" @click="arrowRight()"><i class="fa-solid fa-arrow-right fs-4" style="color: #ffffff;"></i></div>
       <div class="container h-100">
         <div class="row align-items-center h-100">
           <div class="col-12"><img class="ms_imgdetail" :src="this.newArrayImg[this.nextIndex].img" alt=""></div>
