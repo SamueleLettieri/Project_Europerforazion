@@ -1,14 +1,14 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <div class="navbar-brand ms_img"><router-link to="/" @click="isFalse(), nextValue()"><img src="../../assets/img/logo_europerforazioni.jpeg" alt=""></router-link></div>
+        <div class="navbar-brand ms_img"><router-link to="/" @click="isFalse(), nextValue(), scrollMeto()"><img src="../../assets/img/logo_europerforazioni.jpeg" alt=""></router-link></div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item" v-for="(link, index) in dati.links" :key="index">
-              <router-link class="nav-link active ms_hovere" :class="{'ms_active': activeIndex === index || id === index}" @click="nextIndex(index), nextValue()" aria-current="page" :to="link.href"><h6>{{link.text}}</h6></router-link>
+              <router-link class="nav-link active ms_hovere" :class="{'ms_active': activeIndex === index || id === index}" @click="nextIndex(index), nextValue(), scrollMeto()" aria-current="page" :to="link.href"><h6>{{link.text}}</h6></router-link>
             </li>
           </ul>
         </div>
@@ -43,6 +43,10 @@ export default {
       }
       this.activeIndex
     },
+
+    scrollMeto(){
+      window.scrollTo(0, 0);
+    }
   },
 
   watch: {
