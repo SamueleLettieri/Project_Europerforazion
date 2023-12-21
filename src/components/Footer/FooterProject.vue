@@ -8,7 +8,7 @@
                 <div class="">
                     <ul class="p-2 text-start">
                         <li class="nav-item p-0" v-for="(link, index) in dati.links" :key="index">
-                            <router-link class="nav-link active ms_hovere p-0 mb-2 ms_center" @click="nextIndex(index),  setId()" aria-current="page" :to="link.href">{{link.text}}</router-link>
+                            <router-link class="nav-link active ms_hovere p-0 mb-2 ms_center" @click="nextIndex(index), setId(), scrollMeto()" aria-current="page" :to="link.href">{{link.text}}</router-link>
                         </li>
                     </ul>
                 </div>
@@ -58,6 +58,10 @@ export default {
             this.impostaid(this.id); // Chiama la mutazione per cambiare il valore
             this.impostaBoolean(this.boolean);
         },
+
+        scrollMeto(){
+            window.scrollTo(0, 0);
+        }
     } 
 
 }
