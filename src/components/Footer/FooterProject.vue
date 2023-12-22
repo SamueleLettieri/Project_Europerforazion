@@ -2,7 +2,7 @@
   <footer class="ms_black p-5">
     <div class="container ms_c_w">
         <div class="row justify-content-between align-items-center ms_center">
-            <div class="col-12 col-md-4"><main-mamps class="ms_h"/></div>
+            <div class="col-12 col-md-4 ms_margin"><main-mamps class="ms_h"/></div>
             <div class="col-12 col-md-3 mt-4 ms-5 ms_m_0">
                 <h5>Europerforazioni</h5>
                 <div class="">
@@ -91,6 +91,9 @@ li{
     }
     .ms_m_0{
         margin-left: 0 !important;
+    }
+    .ms_margin{
+        margin-bottom: 40px;
     }
 }
 </style>

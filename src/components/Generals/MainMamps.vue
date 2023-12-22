@@ -1,6 +1,9 @@
 <template>
-  <div class="ms_maps mt-2">
-    <a :href="link" target="_blank"><img src="../../assets/img/google-mamp.png" alt=""></a>
+  <div class="ms_maps mt-2 position-relative">
+    <a :href="link" target="_blank">
+      <span class="d-inline-block ms_p-absolute ms_btn rounded-5 ms_pad"><i class="fs-3 fa-solid fa-location-dot"></i></span>
+      <img class="ms_opacity" src="../../assets/img/google-mamp.png" alt="">
+    </a>
   </div>
 </template>
 
@@ -23,12 +26,40 @@ export default {
 
 <style scoped lang="scss">
 .ms_maps{
+  background-color: black;
   width: 100%; 
   height: 300px;
   box-shadow:  2px  2px 5px rgba(165, 165, 165, 0.461),
               -2px -2px 5px rgba(165, 165, 165, 0.461),
                2px -2px 5px rgba(165, 165, 165, 0.461),
               -2px  2px 5px rgba(165, 165, 165, 0.461);
+}
+
+.ms_opacity{
+  opacity: 0.3;
+}
+
+.ms_btn{
+  color: white;
+  background-color: rgb(230, 230, 230);
+  border: 1px solid white;
+}
+
+.ms_maps:hover{
+  .ms_btn{
+    background-color: blue;
+  }
+}
+
+.ms_pad{
+  padding: 13px 18px;
+}
+
+.ms_p-absolute{
+  position: absolute;
+  top: 40%;
+  left: 42%;
+  z-index: 1;
 }
 
 img{
